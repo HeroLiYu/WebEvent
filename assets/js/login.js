@@ -30,7 +30,7 @@ $(function(){
          $('#form_reg').on('submit',function(e){
             e.preventDefault();
             var data={username:$('.redBox [name=username]').val(),password:$('.redBox [name=pwd]').val()};
-           $.post('http://api-breakingnews-web.itheima.net/api/reguser',data,
+           $.post('/api/reguser',data,
             function(res){
                 if(res.status!==0){
                  layer.msg(res.message,{icon:5})
@@ -50,7 +50,7 @@ $(function(){
             var data={username:$('.loginBox [name=username]').val(),password:$('.loginBox [name=pwd]').val()};
             $.ajax({
                 method:'post',
-                url:'http://api-breakingnews-web.itheima.net/api/login',
+                url:'/api/login',
                 data:data,
                 success:function(res){
                     if(res.status!=0){
