@@ -53,7 +53,7 @@ $(function(){
                 url:'/api/login',
                 data:data,
                 success:function(res){
-                    if(res.status!=0){
+                    if(res.status!==0){
                         layer.msg(res.message,{icon:5})
                     }
                     else{
